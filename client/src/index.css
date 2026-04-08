@@ -1,0 +1,291 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* ─── XBOLT Official Brand Colors ────────────────────────────────────────
+   Orange-Red  #F14E23  rgb(241,78,35)   — Primary action color
+   Deep Navy   #0C273C  rgb(12,39,60)    — Primary dark background
+   Dark Teal   #13354C  rgb(19,53,76)    — Secondary dark background
+   Sky Blue    #ABCEE1  rgb(171,206,225) — Light accent / secondary
+   Light Gray  #F2F2F2  rgb(224,224,224) — Light section background
+──────────────────────────────────────────────────────────────────────── */
+
+:root {
+  --radius: 0.75rem;
+  /* Light mode — Sky Blue tones as background, Deep Navy as text */
+  --background: oklch(0.96 0.008 215);      /* near-white with sky blue tint — slightly more sky blue */
+  --foreground: oklch(0.15 0.06 220);       /* Deep Navy #0C273C */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.15 0.06 220);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0.06 220);
+  /* Primary = Orange-Red #F14E23 */
+  --primary: oklch(0.60 0.22 32);
+  --primary-foreground: oklch(1 0 0);
+  /* Secondary = Sky Blue #ABCEE1 */
+  --secondary: oklch(0.85 0.05 215);
+  --secondary-foreground: oklch(0.15 0.06 220);
+  --muted: oklch(0.95 0.01 215);
+  --muted-foreground: oklch(0.50 0.04 220);
+  /* Accent = Sky Blue deeper */
+  --accent: oklch(0.78 0.07 215);
+  --accent-foreground: oklch(0.15 0.06 220);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.88 0.03 215);
+  --input: oklch(0.92 0.02 215);
+  --ring: oklch(0.60 0.22 32);
+  /* Charts */
+  --chart-1: oklch(0.60 0.22 32);   /* Orange-Red */
+  --chart-2: oklch(0.78 0.07 215);  /* Sky Blue */
+  --chart-3: oklch(0.15 0.06 220);  /* Deep Navy */
+  --chart-4: oklch(0.65 0.18 160);  /* Green */
+  --chart-5: oklch(0.60 0.20 300);  /* Purple */
+  /* Sidebar — always Dark (Deep Navy) */
+  --sidebar: oklch(0.15 0.06 220);           /* Deep Navy #0C273C */
+  --sidebar-foreground: oklch(0.93 0.02 215);
+  --sidebar-primary: oklch(0.60 0.22 32);    /* Orange-Red */
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.22 0.07 220);    /* Dark Teal #13354C */
+  --sidebar-accent-foreground: oklch(0.93 0.02 215);
+  --sidebar-border: oklch(0.25 0.07 220);
+  --sidebar-ring: oklch(0.60 0.22 32);
+}
+
+.dark {
+  --background: oklch(0.18 0.065 220);       /* Dark Teal #13354C — slightly lighter than Deep Navy */
+  --foreground: oklch(0.95 0.02 215);
+  --card: oklch(0.20 0.07 220);             /* Dark Teal #13354C */
+  --card-foreground: oklch(0.95 0.02 215);
+  --popover: oklch(0.20 0.07 220);
+  --popover-foreground: oklch(0.95 0.02 215);
+  --primary: oklch(0.62 0.22 32);           /* Orange-Red #F14E23 */
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.25 0.07 220);
+  --secondary-foreground: oklch(0.90 0.02 215);
+  --muted: oklch(0.22 0.06 220);
+  --muted-foreground: oklch(0.68 0.04 215);
+  --accent: oklch(0.72 0.06 215);           /* Sky Blue #ABCEE1 */
+  --accent-foreground: oklch(0.15 0.06 220);
+  --destructive: oklch(0.60 0.22 25);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.28 0.07 220);
+  --input: oklch(0.25 0.07 220);
+  --ring: oklch(0.62 0.22 32);
+  --chart-1: oklch(0.62 0.22 32);
+  --chart-2: oklch(0.72 0.06 215);
+  --chart-3: oklch(0.85 0.05 215);
+  --chart-4: oklch(0.65 0.18 160);
+  --chart-5: oklch(0.60 0.20 300);
+  --sidebar: oklch(0.12 0.05 220);
+  --sidebar-foreground: oklch(0.93 0.02 215);
+  --sidebar-primary: oklch(0.62 0.22 32);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.20 0.07 220);
+  --sidebar-accent-foreground: oklch(0.93 0.02 215);
+  --sidebar-border: oklch(0.22 0.06 220);
+  --sidebar-ring: oklch(0.62 0.22 32);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+  }
+
+  /* English text uses Inter for body, Tektur for headlines */
+  [lang="en"] body, .lang-en {
+    font-family: 'Inter', sans-serif;
+    direction: ltr;
+  }
+
+  /* Tektur for English primary headlines */
+  .font-tektur, h1.en-heading, h2.en-heading {
+    font-family: 'Tektur', sans-serif;
+  }
+
+  /* Inter for English body/secondary */
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+}
+
+/* ─── XBOLT Custom Styles ─────────────────────────────────────────────── */
+
+/* Hero dark background — Deep Navy to Dark Teal */
+.xbolt-gradient {
+  background: linear-gradient(135deg, #0C273C 0%, #13354C 50%, #0C273C 100%);
+}
+
+/* Primary button gradient — Orange-Red */
+.xbolt-gradient-blue {
+  background: linear-gradient(135deg, #F14E23 0%, #FF6535 100%);
+}
+
+/* Sky Blue gradient — secondary accent */
+.xbolt-gradient-sky {
+  background: linear-gradient(135deg, #ABCEE1 0%, #C5DDE9 100%);
+}
+
+/* Gold kept for rewards/points */
+.xbolt-gradient-gold {
+  background: linear-gradient(135deg, oklch(0.68 0.18 55) 0%, oklch(0.76 0.20 65) 100%);
+}
+
+.glass {
+  background: rgba(171, 206, 225, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(171, 206, 225, 0.15);
+}
+
+.glass-card {
+  background: rgba(171, 206, 225, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(171, 206, 225, 0.10);
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Shimmer text uses Orange-Red brand color */
+.shimmer-text {
+  background: linear-gradient(90deg, #F14E23, #FF7A50, #F14E23);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Glow effects updated to brand colors */
+.glow-blue {
+  box-shadow: 0 0 30px rgba(171, 206, 225, 0.35), 0 0 60px rgba(171, 206, 225, 0.15);
+}
+
+.glow-orange {
+  box-shadow: 0 0 30px rgba(241, 78, 35, 0.45), 0 0 60px rgba(241, 78, 35, 0.20);
+}
+
+.glow-gold {
+  box-shadow: 0 0 30px oklch(0.72 0.18 55 / 0.45), 0 0 60px oklch(0.72 0.18 55 / 0.20);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+.float-animation { animation: float 3s ease-in-out infinite; }
+
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(241, 78, 35, 0.15);
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+.pulse-ring::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  animation: pulse-ring 1.5s ease-out infinite;
+  border: 2px solid currentColor;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0C273C; }
+::-webkit-scrollbar-thumb { background: #1a3f5c; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #2a5070; }

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home Page - Arabic & English -->
+  <url>
+    <loc>https://xboltship-axx6a5ws.manus.space/</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://xboltship-axx6a5ws.manus.space/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xboltship-axx6a5ws.manus.space/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xboltship-axx6a5ws.manus.space/"/>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://xboltship-axx6a5ws.manus.space/about</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://xboltship-axx6a5ws.manus.space/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xboltship-axx6a5ws.manus.space/about?lang=en"/>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://xboltship-axx6a5ws.manus.space/contact</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://xboltship-axx6a5ws.manus.space/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xboltship-axx6a5ws.manus.space/contact?lang=en"/>
+  </url>
+
+  <!-- Track Shipment Page -->
+  <url>
+    <loc>https://xboltship-axx6a5ws.manus.space/track</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://xboltship-axx6a5ws.manus.space/track"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xboltship-axx6a5ws.manus.space/track?lang=en"/>
+  </url>
+
+  <!-- Book Shipment Page -->
+  <url>
+    <loc>https://xboltship-axx6a5ws.manus.space/book</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://xboltship-axx6a5ws.manus.space/book"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xboltship-axx6a5ws.manus.space/book?lang=en"/>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://xboltship-axx6a5ws.manus.space/privacy</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Terms & Conditions -->
+  <url>
+    <loc>https://xboltship-axx6a5ws.manus.space/terms</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+</urlset>

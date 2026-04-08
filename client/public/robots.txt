@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /contact
+Allow: /track
+Allow: /book
+Allow: /privacy
+Allow: /terms
+Disallow: /admin
+Disallow: /employee
+Disallow: /api/
+
+Sitemap: https://xboltship-axx6a5ws.manus.space/sitemap.xml
